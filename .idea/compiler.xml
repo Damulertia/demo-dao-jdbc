@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="udemy_jdbc" />
+        <module name="udemy_jdbc_update" />
+        <module name="udemy_jdbc_insert" />
+        <module name="udemy_jdbc_transations" />
+        <module name="udemy_jdbc_delete" />
+        <module name="udemy_jdbc_demo-dao-jdbc" />
+      </profile>
+    </annotationProcessing>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="udemy_jdbc" options="-parameters" />
+      <module name="udemy_jdbc_delete" options="-parameters" />
+      <module name="udemy_jdbc_demo-dao-jdbc" options="-parameters" />
+      <module name="udemy_jdbc_insert" options="-parameters" />
+      <module name="udemy_jdbc_transations" options="-parameters" />
+      <module name="udemy_jdbc_update" options="-parameters" />
+    </option>
+  </component>
+</project>
