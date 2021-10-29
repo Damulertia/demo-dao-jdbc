@@ -1,9 +1,11 @@
 package com.jdbc1.udemy_jdbc.model.entities;
 
+import java.io.Serializable;
 import java.util.Date;
 import java.util.Objects;
 
-public class Seller {
+public class Seller implements Serializable {
+
     private Integer id;
     private String name;
     private String email;
@@ -91,5 +93,17 @@ public class Seller {
     @Override
     public int hashCode() {
         return Objects.hash(id, name, email, birthDate, baseSalary, department);
+    }
+
+    @Override
+    public String toString() {
+        return "Seller{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", email='" + email + '\'' +
+                ", birthDate=" + birthDate +
+                ", baseSalary=" + baseSalary +
+                ", department=" + department +
+                '}';
     }
 }
