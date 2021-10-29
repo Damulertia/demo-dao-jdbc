@@ -1,5 +1,7 @@
 package com.jdbc1.udemy_jdbc.application;
 
+import com.jdbc1.udemy_jdbc.model.dao.DaoFactory;
+import com.jdbc1.udemy_jdbc.model.dao.SellerDao;
 import com.jdbc1.udemy_jdbc.model.entities.Department;
 import com.jdbc1.udemy_jdbc.model.entities.Seller;
 
@@ -14,5 +16,7 @@ public class Program {
 
         Seller seller = new Seller(1, "TON", "ton@gmail", new Date(), 6700.0, obj);
         System.out.println(seller);
+
+        SellerDao sellerDao = DaoFactory.createSellerDao();
     }
 }
