@@ -24,5 +24,13 @@ public class Program {
         System.out.println("\n==== TEST 03: seller findAll ====");
         List<Seller> listAllSellers = sellerDao.findAll();
         listAllSellers.forEach(System.out::println);
+
+        System.out.println("\n==== TEST 04: seller insert ====");
+        Seller sellerToInsert = new Seller(88, "Valéria Buss" , "valeria@gmail", new Date(), 8500.0, seller.getDepartment());
+        sellerDao.insert(sellerToInsert);
+        listAllSellers =sellerDao.findAll();
+        listAllSellers.forEach(System.out::println);
+        System.out.println("Inserted! New id = " + sellerToInsert.getId());
+
     }
 }
