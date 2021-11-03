@@ -6,11 +6,12 @@ import com.jdbc1.udemy_jdbc.model.entities.Seller;
 
 import java.util.Date;
 import java.util.List;
+import java.util.Scanner;
 
 public class Program {
 
     public static void main(String[] args) {
-
+        Scanner sc = new Scanner(System.in);
         SellerDao sellerDao = DaoFactory.createSellerDao();
 
         System.out.println("==== TEST 01: seller findById ====");
@@ -39,5 +40,12 @@ public class Program {
         System.out.println(seller);
         System.out.println("Update completed!");
 
+        System.out.println("\n==== TEST 05: seller delete ====");
+        System.out.print("Insert ID to remove(delete) from data bank: ");
+        int idToDelete = sc.nextInt();
+        sellerDao.deleteById(idToDelete);
+        sellerDao.findById(idToDelete);
+
+        sc.close();
     }
 }
