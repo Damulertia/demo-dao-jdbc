@@ -25,12 +25,19 @@ public class Program {
         List<Seller> listAllSellers = sellerDao.findAll();
         listAllSellers.forEach(System.out::println);
 
-        System.out.println("\n==== TEST 04: seller insert ====");
-        Seller sellerToInsert = new Seller(88, "Valéria Buss" , "valeria@gmail", new Date(), 8500.0, seller.getDepartment());
-        sellerDao.insert(sellerToInsert);
-        listAllSellers =sellerDao.findAll();
-        listAllSellers.forEach(System.out::println);
-        System.out.println("Inserted! New id = " + sellerToInsert.getId());
+//        System.out.println("\n==== TEST 04: seller insert ====");
+//        Seller sellerToInsert = new Seller(88, "Valéria Buss" , "valeria@gmail", new Date(), 8500.0, seller.getDepartment());
+//        sellerDao.insert(sellerToInsert);
+//        listAllSellers =sellerDao.findAll();
+//        listAllSellers.forEach(System.out::println);
+//        System.out.println("Inserted! New id = " + sellerToInsert.getId());
+
+        System.out.println("\n==== TEST 05: seller update ====");
+        seller = sellerDao.findById(11);
+        seller.setName("Valeria Boobs");
+        sellerDao.update(seller);
+        System.out.println(seller);
+        System.out.println("Update completed!");
 
     }
 }
