@@ -33,17 +33,18 @@ public class Program {
 //        listAllSellers.forEach(System.out::println);
 //        System.out.println("Inserted! New id = " + sellerToInsert.getId());
 
-        System.out.println("\n==== TEST 05: seller update ====");
-        seller = sellerDao.findById(11);
-        seller.setName("Valeria Boobs");
-        sellerDao.update(seller);
-        System.out.println(seller);
-        System.out.println("Update completed!");
+//        System.out.println("\n==== TEST 05: seller update ====");
+//        seller = sellerDao.findById(11);
+//        seller.setName("Valeria Boobs");
+//        sellerDao.update(seller);
+//        System.out.println(seller);
+//        System.out.println("Update completed!");
 
         System.out.println("\n==== TEST 05: seller delete ====");
         System.out.print("Insert ID to remove(delete) from data bank: ");
         int idToDelete = sc.nextInt();
         sellerDao.deleteById(idToDelete);
+        System.out.println("Delete complete!");
         sellerDao.findById(idToDelete);
 
         sc.close();
